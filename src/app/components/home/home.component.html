@@ -1,1 +1,5 @@
-<p>home works!</p>
+<app-page-content 
+  [initialContent]="notesService.getCurrentNote()?.content || ''"
+  (textChanged)="handleTextChange($event)"
+  (editorBlur)="handleBlur($event)">
+</app-page-content>
